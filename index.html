@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+		.cuadro1{
+position: absolute;
+right: 200px;
+width: 1500px;
+height: 800px;
+border-style: solid;
+border-radius: 10px;
+top:100px;
+background: #2E4600;
+font-size:150%;
+color:white;
+text-align: center;
+z-index:2;
+}
+		.cuadro2{
+position: absolute;
+right: 100px;
+width: 1700px;
+height: 900px;
+border-style: solid;
+border-radius: 10px;
+top:50px;
+background: #7D4427;
+font-size:150%;
+color:white;
+text-align: center;
+z-index: 1;
+}
+		.cuadrado1{
+position: absolute;
+right: 10%;
+width: 100px;
+height: 100px;
+border-style: solid;
+border-radius: 10px;
+top:10%;
+background: #A2C523;
+font-size:150%;
+color:white;
+text-align: center;
+z-index: 3;
+}
+
+
+
+
+
+
+	</style>
+	<title></title>
+</head>
+<body onload="aleatoria()" onmousemove="">
+
+<div class="cuadro1"></div>
+<div class="cuadro2"></div>
+<div class="cuadrado1" id="cuadrado" onmousedown="clico(event)"></div>
+<audio id="sonidoso" src="sonido.mp3" controls class="soni"></audio>
+<div>
+<button onclick="document.getElementById('player').play()">play</button>
+<button onclick="document.getElementById('player').pause()">pause</button>	
+<button onclick="document.getElementById('player').load()">stop</button>
+
+<button onclick="document.getElementById('player').volume += .1">subir volumen</button>		
+<button onclick="document.getElementById('player').volume -= .1">bajar volumen</button>		
+<script>
+	
+function aleatoria(){
+
+var numx=Math.floor((Math.random() * (1400-1))+1
+	) + 200;
+var numy=Math.floor((Math.random() * (700-1))+1
+	) + 100 ;
+cuadrado.style.right=numx+"px";
+cuadrado.style.top=numy+"px";
+}
+function clico(event)
+{
+sonidoso.play();
+var numx=Math.floor((Math.random() * (1400-1))+1
+	) + 200;
+var numy=Math.floor((Math.random() * (700-1))+1
+	) + 100;
+
+	cuadrado.style.right=numx+"px";
+cuadrado.style.top=numy+"px";
+}
+
+</script>
+</body>
+</html>
